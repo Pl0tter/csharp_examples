@@ -15,8 +15,8 @@ int y = Convert.ToInt32(Console.ReadLine());
 //     if (y>0) Console.WriteLine("Точка (" + x + "; " + y + ") лежит в II четверти");
 //     else Console.WriteLine("Точка (" + x + "; " + y + ") лежит в III четверти");
 // }
-if (x==0 && y==0) Console.WriteLine("Точка (" + x + "; " + y + ") начало координат");
-if (x>0 && y>0) Console.WriteLine("Точка (" + x + "; " + y + ") лежит в I четверти");
-if (x<0 && y>0) Console.WriteLine("Точка (" + x + "; " + y + ") лежит в II четверти");
-if (x<0 && y<0) Console.WriteLine("Точка (" + x + "; " + y + ") лежит в III четверти");
-if (x>0 && y<0) Console.WriteLine("Точка (" + x + "; " + y + ") лежит в IV четверти");
+if (x == 0 && y == 0) Console.WriteLine("Точка (" + x + "; " + y + ") начало координат");
+if (x > 0 && y > 0) Console.WriteLine("Точка (" + x + "; " + y + ") лежит в I четверти");
+if (x < 0 && y > 0) Console.WriteLine("Точка (" + x + "; " + y + ") лежит в II четверти");
+if (x < 0 && y < 0) Console.WriteLine("Точка (" + x + "; " + y + ") лежит в III четверти");
+if (x > 0 && y < 0) Console.WriteLine("Точка (" + x + "; " + y + ") лежит в IV четверти");
