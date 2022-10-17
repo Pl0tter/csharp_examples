@@ -4,13 +4,13 @@
 // Подумать, как лучше это сделать
 
 // Закомментирован вариант с перебором x5.
-// Текущий вариант с извлечением корня левой части. Извлечение корня, почему-то всегда возвращает остаток, хотя его не должно быть. Поэтому проверка на остаток < 0.00000000001.
+// Текущий вариант с извлечением корня левой части. Извлечение корня из больших чисел, почему-то всегда возвращает остаток, хотя его не должно быть. Поэтому проверка x5 на +-1 значения корня.
 
-ulong length = 300;
+uint length = 300;
 // ulong start = 0; // начало для x5
 // ulong end = 0; // конец для x5
 ulong sum = 0;
-double sumRoot = 0;
+uint sumRoot = 0;
 
 for (ulong a = 1; a <= length; a++)
 {
@@ -33,8 +33,11 @@ for (ulong a = 1; a <= length; a++)
                 //     }
                 // }
                 sum = (a * a * a * a * a) + (b * b * b * b * b) + (c * c * c * c * c) + (d * d * d * d * d);
-                sumRoot = Math.Pow(sum, 0.2);
-                if (sumRoot - Math.Truncate(sumRoot) < 0.00000000001) Console.WriteLine(a + " " + b + " " + c + " " + d + " " + (int)sumRoot);
+                sumRoot = Convert.ToUInt32(Math.Pow(sum, 0.2));
+                for (ulong e = sumRoot - 1; e <= sumRoot + 1; e++)
+                {
+                    if (sum == (e * e * e * e * e)) Console.WriteLine(a + " " + b + " " + c + " " + d + " " + e);
+                }
             }
         }
     }
