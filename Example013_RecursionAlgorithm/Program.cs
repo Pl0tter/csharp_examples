@@ -5,6 +5,12 @@
 // // table[1,0]   table[1,1]  table[1,2]  table[1,3]  table[1,4]
 // table[1, 2] = "слово";
 
+// Варианты наполнения массива вручную 
+// int[] line = { 1, 2, 3, 4, 5 };
+// int[,] table = { { 1, 2, 3, 4 }, 
+//                  { 5, 6, 7, 8 } };
+// int[,,] matrix = new int[2, 4, 3];
+
 // for (int rows = 0; rows < 2; rows++)
 // {
 //     for (int columns = 0; columns < 5; columns++)
