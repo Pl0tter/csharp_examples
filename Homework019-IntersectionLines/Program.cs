@@ -11,10 +11,12 @@ float b2 = Convert.ToSingle(Console.ReadLine());
 Console.Write("Введите k2: ");
 float k2 = Convert.ToSingle(Console.ReadLine());
 
-if (k1 == k2) Console.WriteLine("Прямые параллельны");
+if (k1 == k2 && b1 == b2) Console.WriteLine("Прямые совпадают");
+else if (k1 == k2) Console.WriteLine("Прямые параллельны");
 else
 {
     float x = (b2 - b1) / (k1 - k2);
+    if (x == -0) x = 0;
     float y = k1 * x + b1;
     Console.WriteLine("Точка пересечения: " + x + "; " + y);
 }
